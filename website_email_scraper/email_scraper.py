@@ -33,31 +33,3 @@ emails = [email for email in emails if not (email[-3:]=="png" or email[-3:]=="jp
 outputFile = open('output.txt', "w", newline='')
 for email in emails:
     outputFile.write(email + '\n')
-
-
-
-# fixed variable names
-# using .text on the BeautifulSoup object returns only the visible text on the website
-# you have to use .prettify() to get back the HTML, formatted for readability
-
-# not going to export to csv because... there's no reason to.
-# a text file will work just as well. i have no cells.
-# i only have one email per line
-
-# picking up weirdly named images like 12-2019_about-ig_women-at-sprout@2x.jpg so have to update regex expression to exclude those
-
-# apparently, have to use headers to avoid bot-detection
-# what are headers?
-
-""" 
-notes 
-response = requests.get(url, headers=headers) # downloads site content
-response.raise_for_status() # does nothing if all well, raises error if otherwise"""
-
-'''count = 1
-for email in emails:
-    print(f'Email {count}: {email}')
-    count += 1'''
-
-
-
